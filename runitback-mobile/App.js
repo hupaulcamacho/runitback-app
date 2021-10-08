@@ -1,21 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, Alert, Button, Platform, Dimensions} from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import WelcomeScreen from './client/screens/WelcomeScreen';
+import SelectGameScreen from './client/screens/SelectGameScreen';
+import Card from './client/components/Card';
+import { characters } from './client/config/GG_loader.js'
+import GGSTScreen from './client/screens/GGSTScreen';
+import CharacterScreen from './client/screens/CharacterScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <WelcomeScreen />
+    // <SelectGameScreen />
+    // <Card title={characters.sol.charName} subtitle={characters.sol.type} image={characters.sol.icon} />
+    // <GGSTScreen />
+    <CharacterScreen />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
